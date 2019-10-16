@@ -1,0 +1,29 @@
+1 Termo
+Visual Studio Community 2017
+Visual Studio Code
+.NET Core SDK 2.2
+Draw.IO
+Slack
+Office
+VNC
+Adobe Illustrator/Photoshop/XD
+Git
+
+2 Termo
+SQL Server
+Visual Studio Community 2017
+Visual Studio Code
+.NET Core SDK 2.2
+Draw.IO
+Slack
+Office
+Adobe Illustrator/Photoshop/XD
+NodeJS
+VNC
+Postman
+Git
+Android Studio
+MongoDB
+Filezilla
+JDK
+Azure Data Studio
