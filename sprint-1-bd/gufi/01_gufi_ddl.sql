@@ -1,3 +1,7 @@
+--USE master
+--DROP DATABASE Gufi
+--GO
+
 CREATE DATABASE Gufi
 GO
 
@@ -17,6 +21,7 @@ CREATE TABLE Usuarios
 	,Email				VARCHAR(255) NOT NULL UNIQUE
 	,Senha				VARCHAR(255) NOT NULL
 	,Nome				VARCHAR(200) NULL
+	,TipoUsuarioId		INT FOREIGN KEY REFERENCES TiposUsuarios (TipoUsuarioId)
 )
 GO
 

@@ -18,14 +18,27 @@ SELECT COUNT(*) AS QtdCategorias FROM Categorias
 GO
 
 -- Selecione os usuarios
+SELECT * FROM Usuarios
+GO
+
 -- Selecione os tipos de usuarios
 SELECT * FROM TiposUsuarios
 GO
+
 -- Selecione os produtos
+SELECT * FROM Produtos
+GO
 
 -- Selecionando os produtos e suas respectivas categorias
 SELECT P.*, C.*
 FROM Produtos P
 INNER JOIN Categorias C
 ON P.CategoriaId = C.CategoriaId
+GO
+
+-- Selecionar todos os usuários e os tipos de usuários
+SELECT U.*, TU.*
+FROM Usuarios U
+INNER JOIN TiposUsuarios TU
+ON U.TipoUsuarioId = TU.TipoUsuarioId
 GO
