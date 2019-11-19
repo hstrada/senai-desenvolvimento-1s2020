@@ -1,0 +1,1 @@
+Cada filme possui apenas um único gênero.
