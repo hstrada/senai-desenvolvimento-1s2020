@@ -1,0 +1,47 @@
+CREATE DATABASE Nedu
+GO
+
+USE Nedu
+GO
+
+CREATE TABLE TiposUsuarios 
+(
+	TipoUsuarioId		INT PRIMARY KEY IDENTITY
+	,Descricao			VARCHAR(30) UNIQUE NOT NULL
+)
+GO
+
+CREATE TABLE Usuarios 
+(
+	UsuarioId		INT PRIMARY KEY IDENTITY
+	,Nome			VARCHAR(200) NOT NULL
+	,Email			VARCHAR(255) NOT NULL UNIQUE
+	,Senha			VARCHAR(255) NOT NULL
+	,TipoUsuarioId	INT FOREIGN KEY REFERENCES TiposUsuarios (TipoUsuarioId)
+)
+GO
+
+CREATE TABLE Categorias 
+(
+	CategoriaId		INT PRIMARY KEY IDENTITY
+	,NomeCategoria	VARCHAR(200) NOT NULL UNIQUE
+)
+GO
+
+CREATE TABLE Lugares 
+(
+	LugarId				INT PRIMARY KEY IDENTITY
+	,Nome				VARCHAR(200)
+	,AcessoCadeirante	BIT DEFAULT(1) NOT NULL
+	,AssentosGrandes	BIT DEFAULT(1) NOT NULL
+	,Endereco			TEXT
+	,CategoriaId		INT FOREIGN KEY REFERENCES Categorias (CategoriaId)
+)
+GO
+
+CREATE TABLE Favoritos 
+(
+	UsuarioId		INT FOREIGN KEY REFERENCES Usuarios (UsuarioId)
+	,LugarId		INT FOREIGN KEY REFERENCES Lugares (LugarId)
+)
+GO
