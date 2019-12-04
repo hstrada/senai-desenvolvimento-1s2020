@@ -1,0 +1,50 @@
+--USE master
+--DROP DATABASE Gufi
+--GO
+
+CREATE DATABASE Gufi
+GO
+
+USE Gufi
+GO
+
+CREATE TABLE TiposUsuarios
+(
+	TipoUsuarioId		INT PRIMARY KEY IDENTITY
+	,Descricao			VARCHAR(30) NOT NULL UNIQUE
+)
+GO
+
+CREATE TABLE Usuarios
+(
+	UsuarioId			INT PRIMARY KEY IDENTITY
+	,Email				VARCHAR(255) NOT NULL UNIQUE
+	,Senha				VARCHAR(255) NOT NULL
+	,Nome				VARCHAR(200) NULL
+	,TipoUsuarioId		INT FOREIGN KEY REFERENCES TiposUsuarios (TipoUsuarioId)
+)
+GO
+
+CREATE TABLE Categorias 
+(
+	CategoriaId			INT PRIMARY KEY IDENTITY
+	,Nome				VARCHAR(255) NOT NULL UNIQUE
+)
+GO
+
+CREATE TABLE Produtos
+(
+	ProdutoId			INT PRIMARY KEY IDENTITY
+	,Nome				VARCHAR(255) NOT NULL
+	,Descricao			TEXT
+	,Ativo				BIT DEFAULT(1) NOT NULL
+	,CategoriaId		INT FOREIGN KEY REFERENCES Categorias (CategoriaId)
+)
+GO
+
+CREATE TABLE Favoritos 
+(
+	ProdutoId			INT FOREIGN KEY REFERENCES Produtos (ProdutoId)
+	,UsuarioId			INT FOREIGN KEY REFERENCES Usuarios (UsuarioId)
+)
+GO
