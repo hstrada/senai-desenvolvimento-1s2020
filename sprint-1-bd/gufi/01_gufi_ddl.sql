@@ -1,3 +1,8 @@
+--USE master
+--GO
+--DROP DATABASE Gufi
+--GO
+
 CREATE DATABASE Gufi
 GO
 
@@ -17,7 +22,7 @@ CREATE TABLE Usuarios
 	,Nome			VARCHAR(200) NOT NULL
 	,Email			VARCHAR(255) NOT NULL UNIQUE
 	,Senha			VARCHAR(255) NOT NULL
-	,TipoUsuarioId	INT FOREIGN KEY REFERENCES TiposUsuarios (TipoUsuarioId)
+	,TipoUsuarioId	INT NOT NULL FOREIGN KEY REFERENCES TiposUsuarios (TipoUsuarioId)
 )
 GO
 
@@ -28,20 +33,21 @@ CREATE TABLE Categorias
 )
 GO
 
-CREATE TABLE Lugares 
+CREATE TABLE Estabelecimentos 
 (
-	LugarId				INT PRIMARY KEY IDENTITY
+	EstabelecimentoId	INT PRIMARY KEY IDENTITY
 	,Nome				VARCHAR(200)
+	,Ativo				BIT DEFAULT(1) NOT NULL
 	,AcessoCadeirante	BIT DEFAULT(1) NOT NULL
 	,AssentosGrandes	BIT DEFAULT(1) NOT NULL
 	,Endereco			TEXT
-	,CategoriaId		INT FOREIGN KEY REFERENCES Categorias (CategoriaId)
+	,CategoriaId		INT NOT NULL FOREIGN KEY REFERENCES Categorias (CategoriaId)
 )
 GO
 
 CREATE TABLE Favoritos 
 (
-	UsuarioId		INT FOREIGN KEY REFERENCES Usuarios (UsuarioId)
-	,LugarId		INT FOREIGN KEY REFERENCES Lugares (LugarId)
+	UsuarioId			INT NOT NULL FOREIGN KEY REFERENCES Usuarios (UsuarioId)
+	,EstabelecimentoId	INT NOT NULL FOREIGN KEY REFERENCES Estabelecimentos (EstabelecimentoId)
 )
 GO
