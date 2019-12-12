@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\_gits\\senai-dev-1s2020\\sprint-2-backend\\01_ado.net\\Senai.Optus\\Senai.Optus\\Senai.Optus.csproj": {}
+  },
+  "projects": {
+    "C:\\_gits\\senai-dev-1s2020\\sprint-2-backend\\01_ado.net\\Senai.Optus\\Senai.Optus\\Senai.Optus.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_gits\\senai-dev-1s2020\\sprint-2-backend\\01_ado.net\\Senai.Optus\\Senai.Optus\\Senai.Optus.csproj",
+        "projectName": "Senai.Optus",
+        "projectPath": "C:\\_gits\\senai-dev-1s2020\\sprint-2-backend\\01_ado.net\\Senai.Optus\\Senai.Optus\\Senai.Optus.csproj",
+        "packagesPath": "C:\\Users\\helena.strada\\.nuget\\packages\\",
+        "outputPath": "C:\\_gits\\senai-dev-1s2020\\sprint-2-backend\\01_ado.net\\Senai.Optus\\Senai.Optus\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\helena.strada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

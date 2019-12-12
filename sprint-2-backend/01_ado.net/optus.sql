@@ -1,7 +1,7 @@
-CREATE DATABASE Optus20
+CREATE DATABASE Optus
 GO
 
-USE Optus20
+USE Optus
 GO
 
 CREATE TABLE EstilosMusicais
@@ -17,8 +17,14 @@ GO
 SELECT * FROM EstilosMusicais
 GO
 
+SELECT EstiloMusicalId, Nome FROM EstilosMusicais
+GO
+
 UPDATE EstilosMusicais SET Nome = 'Rock Alternativo' WHERE EstiloMusicalId = 1
 GO
 
 DELETE FROM EstilosMusicais WHERE EstiloMusicalId = 1
+GO
+
+INSERT INTO EstilosMusicais VALUES ('Folk')
 GO
